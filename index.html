@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday zzz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> 🎉 Happy Birthday! 🎉 </h1>
+        <p class="greeting">Dear my boyfriend zyt, wishing you good health and abundant wealth in your new age!"</p>
+        <p class="wish">May your life be as sweet as this cake!</p>
+        <img src="cake.jpg" alt="Birthday Cake" class="cake-image">
+
+        <!-- 添加音乐 -->
+        <audio id="birthdayMusic" loop autoplay>
+            <source src="birthday-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- 礼物生成 --->
+        <div class="gift-section">
+            <button onclick="generateGift()">Generate Random Gift</button>
+            <p id="giftMessage" class="hidden"></p>
+        </div>
+    </div>
+
+    <!-- 网易云音乐图标 -->
+    <img src="music-icon.png" alt="Netease Cloud Music" class="music-icon">
+
+    <script>
+        const gifts = [
+            "a lottery ticket",
+            "gift card",
+            "another lottery ticket",
+            "a piece of cake",
+            "a xiaomi toothbrush",
+            "a xiaomi shaver",
+            "air",
+            "a kiss from pp",
+            "some snacks",
+            "I will punch you "
+        ];
+
+        function generateGift() {
+            const randomIndex = Math.floor(Math.random() * gifts.length);
+            const selectedGift = gifts[randomIndex];
+            const giftMessage = document.getElementById('giftMessage');
+
+            giftMessage.innerText = `You received a ${selectedGift} as a gift! 🎁`;
+            giftMessage.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
