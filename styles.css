@@ -1,0 +1,127 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-image: url('background1.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    color: #d50000;
+    font-size: 2rem;
+    animation: jump 1s infinite, gradient 3s linear infinite;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        color: #d50000;
+    }
+    50% {
+        color: #ffcc00;
+    }
+    100% {
+        color: #d50000;
+    }
+}
+
+.greeting {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.wish {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.cake-image {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #d50000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b00000;
+}
+
+#giftMessage {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #4caf50;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 网易云音乐图标样式 */
+.music-icon {
+    position: fixed; /* 固定在页面 */
+    top: 10px; /* 距离顶部10像素 */
+    left: 10px; /* 距离左侧10像素 */
+    width: 50px; /* 图标宽度 */
+    height: 50px; /* 图标高度 */
+    animation: spin 2s linear infinite; /* 转动动画 */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .greeting, .wish {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .greeting, .wish {
+        font-size: 0.9rem;
+    }
+}
